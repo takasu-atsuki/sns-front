@@ -43,8 +43,8 @@ const MailList = memo(() => {
                     {profiles.length > 0 &&
                       profiles.filter(
                         (profile) =>
-                          profile.userPro === m.send_user ||
-                          profile.userPro === m.get_user
+                          profile.userPro === m.sendUser ||
+                          profile.userPro === m.getUser
                       )[0].nickName}
                   </Typography>
                   <br />

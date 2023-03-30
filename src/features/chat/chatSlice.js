@@ -44,8 +44,8 @@ export const postGroupIn = createAsyncThunk(
   'groupIn/post',
   async (data, { rejectWithValue }) => {
     const uploadData = new FormData();
-    uploadData.append('target_group', data.groupId);
-    uploadData.append('show_user', data.showUser);
+    uploadData.append('targetGroup', data.groupId);
+    uploadData.append('showUser', data.showUser);
     try {
       const res = await axios.post(
         process.env.REACT_APP_GROUPIN_URL,
@@ -202,8 +202,8 @@ const initialState = {
     title: '',
     openGrouper: 0,
     inUser: [],
-    created_at: '',
-    updated_at: '',
+    createdAt: '',
+    updatedAt: '',
   },
   currentAddUserList: [],
   groupChatLoading: false,
@@ -229,8 +229,8 @@ const chatSlice = createSlice({
         title: '',
         openGrouper: 0,
         inUser: [],
-        created_at: '',
-        updated_at: '',
+        createdAt: '',
+        updatedAt: '',
       };
     },
     setCurrentAddUserList: (state, action) => {

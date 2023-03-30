@@ -27,7 +27,7 @@ const GroupRequest = memo(() => {
   }, [dispatch, token]);
 
   const filterGroupIn = groupIn.filter((member) => {
-    return member.show_user === myProfile.userPro && member.approved === false;
+    return member.showUser === myProfile.userPro && member.approved === false;
   });
 
   return (
@@ -49,7 +49,7 @@ const GroupRequest = memo(() => {
                 <GroupApprovedList
                   key={groupIn.id}
                   groups={groups.filter(
-                    (group) => group.id === groupIn.target_group
+                    (group) => group.id === groupIn.targetGroup
                   )}
                   myProfile={myProfile}
                   profiles={profiles}

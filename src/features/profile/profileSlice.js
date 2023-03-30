@@ -292,7 +292,7 @@ export const updateFriendReq = createAsyncThunk(
 export const postDmail = createAsyncThunk(
   'mail/post',
   async (data, { rejectWithValue }) => {
-    const updateData = { get_user: data.getUser, message: data.message };
+    const updateData = { getUser: data.getUser, message: data.message };
     try {
       const res = await client.post(
         process.env.REACT_APP_DMAIL_URL,

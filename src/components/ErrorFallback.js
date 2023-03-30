@@ -35,7 +35,7 @@ function ErrorFallback(props) {
   return (
     <Container>
       <Paper elevation={7} sx={{ minHeight: 400, mt: 2, padding: 3 }}>
-        <Typography variant="h1" sx={{ fontWeight: 660, mb: 3 }}>
+        <Typography variant="h2" sx={{ fontWeight: 660, mb: 3 }}>
           {profileError.code ||
             allUserError.code ||
             chatError.code ||

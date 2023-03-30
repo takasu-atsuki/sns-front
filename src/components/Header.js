@@ -62,9 +62,7 @@ const Header = memo((props) => {
   };
 
   const groupRequestCount = groupIns.filter((groupIn) => {
-    return (
-      groupIn.show_user === myProfile.userPro && groupIn.approved === false
-    );
+    return groupIn.showUser === myProfile.userPro && groupIn.approved === false;
   }).length;
 
   const friendRequestCount = friendList.filter((friend) => {

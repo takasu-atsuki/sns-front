@@ -94,7 +94,7 @@ const allUserSlice = createSlice({
     setSelectUserDiary: (state, action) => {
       if (action.payload !== 0) {
         state.selectUserAllDiary = state.allDiary.filter((diary) => {
-          return diary.user_id === action.payload;
+          return diary.userId === action.payload;
         });
       }
     },

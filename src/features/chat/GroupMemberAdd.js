@@ -54,7 +54,7 @@ const GroupMemberAdd = memo((props) => {
   }, [dispatch, token]);
 
   const filterGroupIn = groupIn.filter((group) => {
-    return group.target_group === choiceGroup.id;
+    return group.targetGroup === choiceGroup.id;
   });
 
   return (
@@ -76,7 +76,7 @@ const GroupMemberAdd = memo((props) => {
                     onClick={() => userAdd(profile.userPro)}
                     disabled={
                       filterGroupIn.filter((group) => {
-                        return group.show_user === profile.userPro;
+                        return group.showUser === profile.userPro;
                       })[0]
                         ? true
                         : false
@@ -100,7 +100,7 @@ const GroupMemberAdd = memo((props) => {
                             variant="body2"
                             color="text.primary"
                           >
-                            {profile.created_at}
+                            {profile.createdAt}
                           </Typography>
                         </React.Fragment>
                       }
