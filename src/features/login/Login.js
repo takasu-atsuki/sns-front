@@ -94,7 +94,11 @@ const Login = (props) => {
           textAlign: 'center',
         }}
       >
-        {loading && <CircularProgress color="success" />}
+        {loading && (
+          <Box sx={{ mb: 2 }}>
+            <CircularProgress color="success" />
+          </Box>
+        )}
         <Avatar>
           <LockOutlinedIcon />
         </Avatar>
