@@ -42,7 +42,7 @@ const DiaryList = memo((props) => {
     <Box sx={{ width: '100%', height: 450, overflowY: 'scroll' }}>
       <ImageList
         sx={{ width: '100%', mt: 0, marginX: 'auto' }}
-        cols={4}
+        cols={3}
         variant="masonry"
       >
         {myDiaryList.length > 0 &&

@@ -56,8 +56,6 @@ const UserList = memo((props) => {
         dense
         sx={{
           bgcolor: 'background.paper',
-          paddingX: 1,
-          maxHeight: 400,
           overFlow: 'hidden',
           overflowY: 'scroll',
         }}
@@ -65,7 +63,7 @@ const UserList = memo((props) => {
         {filterProfiles.length > 0 &&
           filterProfiles.map((profile) => {
             return (
-              <ListItem key={profile.id}>
+              <ListItem key={profile.id} sx={{ padding: 1 }}>
                 <ListItemButton
                   onClick={(event) => {
                     event.preventDefault();
@@ -73,17 +71,44 @@ const UserList = memo((props) => {
                     handleChangeUserId(profile.userPro);
                   }}
                 >
-                  <ListItemAvatar sx={{ mr: 2 }}>
+                  <ListItemAvatar
+                    sx={{
+                      '@media screen and (min-width:600px)': {
+                        mr: 2,
+                      },
+                    }}
+                  >
                     <Avatar
                       alt={`Avatar`}
                       src={profile.image}
-                      sx={{ width: 60, height: 60 }}
+                      sx={{
+                        '@media screen and (max-width:600px)': {
+                          width: '30px',
+                          height: '30px',
+                        },
+                        width: '60px',
+                        height: '60px',
+                      }}
                     />
                   </ListItemAvatar>
-                  <ListItemText primary={profile.nickName} />
+                  <ListItemText
+                    primary={profile.nickName}
+                    primaryTypographyProps={{
+                      sx: {
+                        '@media screen and (max-width:600px)': {
+                          fontSize: '8px',
+                        },
+                      },
+                    }}
+                  />
                   <Fab
                     variant="extended"
-                    sx={{ mr: 2 }}
+                    sx={{
+                      mr: 1,
+                      '@media screen and (max-width:600px)': {
+                        fontSize: '8px',
+                      },
+                    }}
                     size="small"
                     disabled={
                       myFriend.filter(
@@ -105,6 +130,11 @@ const UserList = memo((props) => {
                   <Fab
                     variant="extended"
                     size="small"
+                    sx={{
+                      '@media screen and (max-width:600px)': {
+                        fontSize: '8px',
+                      },
+                    }}
                     onClick={(event) => {
                       event.preventDefault();
                       event.stopPropagation();

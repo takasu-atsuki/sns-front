@@ -28,7 +28,16 @@ const MyProfile = memo((props) => {
     navigate('/editProf');
   };
   return (
-    <Paper elevation={3} sx={{ textAlign: 'center', padding: 3, mb: 3 }}>
+    <Paper
+      elevation={3}
+      sx={{
+        textAlign: 'center',
+        paddingTop: 1,
+        paddingBottom: 3,
+        paddingX: 1,
+        mb: 3,
+      }}
+    >
       <Box>
         {isLoading ? (
           <Skeleton variant="circular" sx={{ marginX: 'auto', mb: 3 }}>
@@ -60,7 +69,15 @@ const MyProfile = memo((props) => {
           />
         )}
 
-        <Typography variant="h3">
+        <Typography
+          variant="h3"
+          sx={{
+            '@media screen and (max-width:600px)': {
+              fontSize: '15px',
+            },
+            fontSize: '25px',
+          }}
+        >
           <Button onClick={updateProf} sx={{ color: 'black' }}>
             <EditIcon />
           </Button>

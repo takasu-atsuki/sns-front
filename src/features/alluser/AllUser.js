@@ -5,7 +5,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useCookies } from 'react-cookie';
 import UserDiary from './UserDiary';
 import DMailModal from '../dmail/DMailModal';
-import { getMyProf, getProfiles, getMyFriend } from '../profile/profileSlice';
+import {
+  getMyProf,
+  getProfiles,
+  getMyFriend,
+  selectProfiles,
+} from '../profile/profileSlice';
 import {
   selectSelectUserId,
   setSelectUserDiary,
@@ -20,6 +25,7 @@ import UserList from './UserList';
 const AllUser = memo((props) => {
   const [cookies] = useCookies(['pass_token']);
   const { token } = cookies.pass_token;
+  const profiles = useSelector(selectProfiles);
   const allUserLoading = useSelector(selectAllUserLoading);
   const dispatch = useDispatch();
   const selectUserId = useSelector(selectSelectUserId);
@@ -50,30 +56,32 @@ const AllUser = memo((props) => {
 
   return (
     <>
-      <Container sx={{ mt: 2 }}>
-        {allUserLoading ? (
-          <Box
-            sx={{
-              display: 'flex',
-              justifyContent: 'center',
-              alignItems: 'center',
-              height: '100vh',
-            }}
-          >
-            <CircularProgress color="success" />
-          </Box>
-        ) : (
-          <Grid container spacing={2}>
-            <Grid item xs={12}>
-              <UserList setOpen={setOpen} />
+      {allUserLoading ? (
+        <Box
+          sx={{
+            display: 'flex',
+            justifyContent: 'center',
+            alignItems: 'center',
+            height: '100vh',
+          }}
+        >
+          <CircularProgress color="success" />
+        </Box>
+      ) : (
+        <>
+          <Container sx={{ mt: 2 }}>
+            <Grid container spacing={2}>
+              <Grid item xs={12}>
+                <UserList setOpen={setOpen} />
+              </Grid>
+              <Grid item xs={12}>
+                <UserDiary />
+              </Grid>
             </Grid>
-            <Grid item xs={12}>
-              <UserDiary />
-            </Grid>
-          </Grid>
-        )}
-      </Container>
-      <DMailModal open={open} handleClose={handleClose} />
+          </Container>
+          <DMailModal open={open} handleClose={handleClose} />
+        </>
+      )}
     </>
   );
 });
