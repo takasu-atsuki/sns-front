@@ -108,7 +108,11 @@ const DiaryList = memo((props) => {
                     alt={diary.message ? diary.message : 'NO TITLE'}
                     loading="lazy"
                   />
-                  <ImageListItemBar title={diary.message} subtitle={''} />
+                  <ImageListItemBar
+                    title={diary.message}
+                    subtitle={''}
+                    sx={{ height: '50px' }}
+                  />
                   <Fab
                     color="error"
                     aria-label="add"
