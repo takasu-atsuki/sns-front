@@ -65,7 +65,16 @@ const Chat = memo((props) => {
             >
               <ArrowBackIosNewIcon />
             </IconButton>
-            <Typography variant="h5" color="inherit" align="center">
+            <Typography
+              variant="h5"
+              color="inherit"
+              align="center"
+              sx={{
+                '@media screen and (max-width:600px)': {
+                  fontSize: '15px',
+                },
+              }}
+            >
               {choiceGroup.title}
             </Typography>
           </Toolbar>

@@ -47,7 +47,7 @@ const ChatMessage = memo((props) => {
           variant="standard"
           color="success"
           multiline
-          sx={{ width: '30%' }}
+          sx={{ width: '60%' }}
           value={message}
           onChange={changeMessage}
           helperText={chatErrorMessage}
@@ -56,7 +56,12 @@ const ChatMessage = memo((props) => {
           variant="contained"
           color="success"
           size="large"
-          sx={{ ml: 2 }}
+          sx={{
+            ml: 2,
+            '@media screen and (max-width:600px)': {
+              width: '20px',
+            },
+          }}
           onClick={clickPostMessage}
           disabled={!message || chatErrorMessage !== '' ? true : false}
         >
