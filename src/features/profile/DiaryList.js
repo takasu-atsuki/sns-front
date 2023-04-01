@@ -41,7 +41,7 @@ const DiaryList = memo((props) => {
   return (
     <Box sx={{ width: '100%', height: 450, overflowY: 'scroll' }}>
       <ImageList
-        sx={{ width: '100%', height: 450, mt: 0, marginX: 'auto' }}
+        sx={{ width: '100%', mt: 0, marginX: 'auto' }}
         cols={4}
         variant="masonry"
       >

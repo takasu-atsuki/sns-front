@@ -44,7 +44,6 @@ const UserDiary = memo((props) => {
         cols={4}
         sx={{
           width: '100%',
-          height: 450,
           mt: 0,
         }}
         variant="masonry"
