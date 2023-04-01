@@ -148,9 +148,14 @@ const AllChatGroup = memo((props) => {
                         {group.openGrouper === myProfile.userPro && (
                           <Fab
                             color="success"
-                            sx={{ mr: 2, width: '100px' }}
+                            sx={{
+                              mr: 2,
+                              width: '100px',
+                              '@media screen and (max-width:600px)': {
+                                width: '50px',
+                              },
+                            }}
                             variant="extended"
-                            size="small"
                             onClick={(event) => {
                               event.preventDefault();
                               event.stopPropagation();
@@ -164,8 +169,12 @@ const AllChatGroup = memo((props) => {
                           <Fab
                             color="error"
                             variant="extended"
-                            size="small"
-                            sx={{ width: '100px' }}
+                            sx={{
+                              width: '100px',
+                              '@media screen and (max-width:600px)': {
+                                width: '50px',
+                              },
+                            }}
                             onClick={(event) => {
                               event.preventDefault();
                               event.stopPropagation();

@@ -24,7 +24,6 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
-  p: 4,
 };
 
 const GroupMemberAdd = memo((props) => {
@@ -77,7 +76,11 @@ const GroupMemberAdd = memo((props) => {
           {profileFilter.length > 0 &&
             profileFilter.map((profile) => {
               return (
-                <ListItem alignItems="flex-start" key={profile.id}>
+                <ListItem
+                  alignItems="flex-start"
+                  key={profile.id}
+                  sx={{ padding: 0 }}
+                >
                   <ListItemButton
                     onClick={() => userAdd(profile.userPro)}
                     disabled={
