@@ -173,9 +173,11 @@ export const groupInUpdateGroupUp = createAsyncThunk(
       newUserList.push(data.userId);
 
       const groupUpdateData = {};
+      groupUpdateData.id = data.group.id;
+      groupUpdateData.openGrouper = data.group.openGrouper;
       groupUpdateData.inUser = newUserList;
 
-      await axios.patch(
+      await axios.put(
         `${process.env.REACT_APP_GROUP_URL}${data.group.id}/`,
         groupUpdateData,
         {
