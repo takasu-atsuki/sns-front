@@ -57,6 +57,7 @@ const UserList = memo((props) => {
         sx={{
           bgcolor: 'background.paper',
           overFlow: 'hidden',
+          maxHeight: 400,
           overflowY: 'scroll',
         }}
       >
