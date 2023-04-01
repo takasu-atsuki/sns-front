@@ -111,7 +111,7 @@ const DiaryList = memo((props) => {
                   <ImageListItemBar
                     title={diary.message}
                     subtitle={''}
-                    sx={{ height: '50px' }}
+                    sx={{ height: '50px', boxSizing: 'border-box' }}
                   />
                   <Fab
                     color="error"

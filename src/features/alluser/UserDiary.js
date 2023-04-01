@@ -61,7 +61,7 @@ const UserDiary = memo((props) => {
               />
               <ImageListItemBar
                 title={diary.message}
-                sx={{ height: '50px' }}
+                sx={{ height: '50px', boxSizing: 'border-box' }}
                 subtitle={''}
                 actionIcon={
                   <IconButton
