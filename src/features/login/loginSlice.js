@@ -43,6 +43,12 @@ const loginSlice = createSlice({
     inputErrMessage: (state, action) => {
       state.errMessage = action.payload;
     },
+    setLoading: (state, action) => {
+      state.loading = true;
+    },
+    resetLoading: (state, action) => {
+      state.loading = false;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(registerUser.pending, (state, action) => {
@@ -57,8 +63,14 @@ const loginSlice = createSlice({
   },
 });
 
-export const { editUserName, editPassword, toggleLogin, inputErrMessage } =
-  loginSlice.actions;
+export const {
+  editUserName,
+  editPassword,
+  toggleLogin,
+  inputErrMessage,
+  setLoading,
+  resetLoading,
+} = loginSlice.actions;
 
 export const selectAuth = (state) => state.login.auth;
 export const selectIsLoginView = (state) => state.login.isLoginView;

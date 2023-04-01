@@ -20,6 +20,8 @@ import {
   editUserName,
   editPassword,
   registerUser,
+  setLoading,
+  resetLoading,
 } from './loginSlice';
 import { postMyProf } from '../profile/profileSlice';
 import client from '../../utils/axiosCustom';
@@ -75,7 +77,9 @@ const Login = (props) => {
 
   const onClickLoginRegister = async () => {
     if (isLoginView) {
+      dispatch(setLoading());
       await login();
+      dispatch(resetLoading());
     } else {
       await dispatch(registerUser(auth));
       await login();
