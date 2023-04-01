@@ -47,7 +47,12 @@ const ChatMessage = memo((props) => {
           variant="standard"
           color="success"
           multiline
-          sx={{ width: '60%' }}
+          sx={{
+            width: '50%',
+            '@media screen and (max-width:600px)': {
+              width: '60%',
+            },
+          }}
           value={message}
           onChange={changeMessage}
           helperText={chatErrorMessage}

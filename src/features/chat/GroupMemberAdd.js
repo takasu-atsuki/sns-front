@@ -24,6 +24,9 @@ const style = {
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
+  '@media screen and (max-width:600px)': {
+    width: '80%',
+  },
 };
 
 const GroupMemberAdd = memo((props) => {
