@@ -173,7 +173,7 @@ export const groupInUpdateGroupUp = createAsyncThunk(
       newUserList.push(data.userId);
 
       const groupUpdateData = {};
-      groupUpdateData.id = data.group.id;
+      groupUpdateData.title = data.group.title;
       groupUpdateData.openGrouper = data.group.openGrouper;
       groupUpdateData.inUser = newUserList;
 
