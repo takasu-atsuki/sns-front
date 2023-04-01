@@ -150,6 +150,7 @@ const AllChatGroup = memo((props) => {
                             color="success"
                             sx={{ mr: 2, width: '100px' }}
                             variant="extended"
+                            size="small"
                             onClick={(event) => {
                               event.preventDefault();
                               event.stopPropagation();
@@ -163,6 +164,7 @@ const AllChatGroup = memo((props) => {
                           <Fab
                             color="error"
                             variant="extended"
+                            size="small"
                             sx={{ width: '100px' }}
                             onClick={(event) => {
                               event.preventDefault();
