@@ -25,7 +25,6 @@ import UserList from './UserList';
 const AllUser = memo((props) => {
   const [cookies] = useCookies(['pass_token']);
   const { token } = cookies.pass_token;
-  const profiles = useSelector(selectProfiles);
   const allUserLoading = useSelector(selectAllUserLoading);
   const dispatch = useDispatch();
   const selectUserId = useSelector(selectSelectUserId);

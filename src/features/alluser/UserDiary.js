@@ -39,7 +39,7 @@ const UserDiary = memo((props) => {
     selectUserAllDiary.length > 0 ? selectUserAllDiary : allDiary;
 
   return (
-    <Box sx={{ width: '100%', height: 450, overflowY: 'scroll' }}>
+    <Box sx={{ width: '100%', height: 600, overflowY: 'scroll' }}>
       <ImageList
         cols={3}
         sx={{
@@ -61,6 +61,7 @@ const UserDiary = memo((props) => {
               />
               <ImageListItemBar
                 title={diary.message}
+                sx={{ height: '20%' }}
                 subtitle={''}
                 actionIcon={
                   <IconButton
