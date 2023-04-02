@@ -43,7 +43,7 @@ const FriendApproveList = memo((props) => {
                 primaryTypographyProps={{
                   sx: {
                     fontSize: '18px',
-                    '@media screen and (max_width:600px)': {
+                    '@media screen and (max-width:600px)': {
                       fontSize: '8px',
                     },
                   },
