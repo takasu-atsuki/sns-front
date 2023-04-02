@@ -144,7 +144,15 @@ const AllChatGroup = memo((props) => {
                           changePageChat(group);
                         }}
                       >
-                        <ListItemText primary={group.title} />
+                        <ListItemText
+                          primary={group.title}
+                          sx={{
+                            fontSize: '18px',
+                            '@media screen and (max-width:600px)': {
+                              fontSize: '12px',
+                            },
+                          }}
+                        />
                         {group.openGrouper === myProfile.userPro && (
                           <Fab
                             color="success"

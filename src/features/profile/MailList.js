@@ -56,12 +56,10 @@ const MailList = memo(() => {
                       fontSize: '12px',
                     }}
                   >
-                    {m.created_at} :{' '}
+                    {m.createdAt} :{' '}
                     {profiles.length > 0 &&
                       profiles.filter(
-                        (profile) =>
-                          profile.userPro === m.sendUser ||
-                          profile.userPro === m.getUser
+                        (profile) => profile.userPro === m.sendUser
                       )[0].nickName}
                   </Typography>
                   <br />

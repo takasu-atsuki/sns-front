@@ -99,6 +99,7 @@ const UserList = memo((props) => {
                         '@media screen and (max-width:600px)': {
                           fontSize: '8px',
                         },
+                        fontSize: '18px',
                       },
                     }}
                   />
