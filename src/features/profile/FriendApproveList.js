@@ -63,6 +63,7 @@ const FriendApproveList = memo((props) => {
                   '@media screen and (max-width:600px)': {
                     fontSize: '8px',
                   },
+                  fontSize: '15px',
                 }}
                 size="small"
                 onClick={(event) => {

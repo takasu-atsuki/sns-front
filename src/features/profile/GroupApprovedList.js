@@ -50,6 +50,7 @@ const GroupApprovedList = memo((props) => {
                   '@media screen and (max-width:600px)': {
                     fintSize: '8px',
                   },
+                  fontSize: '15px',
                 }}
                 size="small"
                 onClick={(event) => {

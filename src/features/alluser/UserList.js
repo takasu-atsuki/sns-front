@@ -110,6 +110,7 @@ const UserList = memo((props) => {
                       '@media screen and (max-width:600px)': {
                         fontSize: '8px',
                       },
+                      fontSize: '15px',
                     }}
                     size="small"
                     disabled={
@@ -136,6 +137,7 @@ const UserList = memo((props) => {
                       '@media screen and (max-width:600px)': {
                         fontSize: '8px',
                       },
+                      fontSize: '15px',
                     }}
                     onClick={(event) => {
                       event.preventDefault();
