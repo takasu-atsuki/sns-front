@@ -11,7 +11,15 @@ const UserAvatarGroup = memo((props) => {
     return null;
   });
   return (
-    <AvatarGroup max={5}>
+    <AvatarGroup
+      max={5}
+      sx={{
+        '@media screen and (max-width:600px)': {
+          width: '20px',
+          height: '20px',
+        },
+      }}
+    >
       {groupMember.length > 0 &&
         groupMember.map((user) => {
           return <GroupAvatar user={user} key={user} />;

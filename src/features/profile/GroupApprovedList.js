@@ -31,10 +31,10 @@ const GroupApprovedList = memo((props) => {
                 primary={group.title}
                 primaryTypographyProps={{
                   sx: {
-                    fontSize: '18px',
                     '@media screen and (max-width:600px)': {
                       fontSize: '8px',
                     },
+                    fontSize: '18px',
                   },
                 }}
               />
