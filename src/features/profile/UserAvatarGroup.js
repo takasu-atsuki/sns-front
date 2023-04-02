@@ -4,10 +4,12 @@ import GroupAvatar from './GroupAvatar';
 
 const UserAvatarGroup = memo((props) => {
   const { inUser, openGrouper } = props;
-  console.log(inUser);
-  console.log(openGrouper);
-  const groupMember =
-    inUser.length > 0 ? inUser.unshift(openGrouper) : [openGrouper];
+  const groupMember = [];
+  groupMember.push(openGrouper);
+  inUser.map((user) => {
+    groupMember.push(user);
+    return null;
+  });
   return (
     <AvatarGroup max={5}>
       {groupMember.length > 0 &&
