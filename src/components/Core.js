@@ -7,7 +7,7 @@ import { CircularProgress } from '@mui/material';
 import ErrorFallback from '../components/ErrorFallback';
 import { ErrorBoundary } from 'react-error-boundary';
 import ThrowingError from './ThrowingError';
-// import styles from './Core.module.css';
+import styles from './Core.module.css';
 
 const Core = memo((props) => {
   const [cookies] = useCookies(['pass_token']);
@@ -44,15 +44,13 @@ const Core = memo((props) => {
   return (
     <ErrorBoundary FallbackComponent={ErrorFallback}>
       <ThrowingError>
-        {/* <div className={styles.base}>
-          <div className={styles.content}> */}
-        <Header />
-        {children}
-        {/* </div> */}
-        {/* <div className={styles.footer}> */}
-        <Footer />
-        {/* </div>
-        </div> */}
+        <div className={styles.base}>
+          <Header />
+          <div className={styles.content}>{children}</div>
+          <div className={styles.footer}>
+            <Footer />
+          </div>
+        </div>
       </ThrowingError>
     </ErrorBoundary>
   );
