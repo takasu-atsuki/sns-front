@@ -146,10 +146,12 @@ const AllChatGroup = memo((props) => {
                       >
                         <ListItemText
                           primary={group.title}
-                          sx={{
-                            fontSize: '18px',
-                            '@media screen and (max-width:600px)': {
-                              fontSize: '12px',
+                          primaryTypographyProps={{
+                            sx: {
+                              fontSize: '18px',
+                              '@media screen and (max-width:600px)': {
+                                fontSize: '12px',
+                              },
                             },
                           }}
                         />

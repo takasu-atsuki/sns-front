@@ -27,7 +27,17 @@ const GroupApprovedList = memo((props) => {
         groups.map((group) => {
           return (
             <ListItem key={group.id} sx={{ padding: 2 }}>
-              <ListItemText primary={group.title} />
+              <ListItemText
+                primary={group.title}
+                primaryTypographyProps={{
+                  sx: {
+                    fontSize: '18px',
+                    'media screen and (max-width:600px)': {
+                      fontSize: '12px',
+                    },
+                  },
+                }}
+              />
               <UserAvatarGroup inUser={group.inUser} />
               <Fab
                 variant="extended"

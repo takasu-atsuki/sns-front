@@ -38,7 +38,17 @@ const FriendApproveList = memo((props) => {
                   sx={{ width: 60, height: 60 }}
                 />
               </ListItemAvatar>
-              <ListItemText primary={profile.nickName} />
+              <ListItemText
+                primary={profile.nickName}
+                primaryTypographyProps={{
+                  sx: {
+                    fontSize: '18px',
+                    '@media screen and (max_width:600px)': {
+                      fontSize: '12px',
+                    },
+                  },
+                }}
+              />
               <Fab
                 variant="extended"
                 sx={{ mr: 2 }}
