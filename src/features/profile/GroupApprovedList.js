@@ -48,7 +48,7 @@ const GroupApprovedList = memo((props) => {
                   mr: 2,
                   ml: 3,
                   '@media screen and (max-width:600px)': {
-                    fintSize: '8px',
+                    fontSize: '8px',
                   },
                   fontSize: '15px',
                 }}
