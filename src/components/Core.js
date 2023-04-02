@@ -49,7 +49,9 @@ const Core = memo((props) => {
             <Header />
             {children}
           </div>
-          <Footer />
+          <div className={styles.footer}>
+            <Footer />
+          </div>
         </div>
       </ThrowingError>
     </ErrorBoundary>
