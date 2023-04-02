@@ -36,12 +36,12 @@ const FriendApproveList = memo((props) => {
                   alt={`Avatar`}
                   src={profile.image}
                   sx={{
-                    width: '60px',
-                    height: '60px',
                     '@media screen and (max-width:600px)': {
                       width: '30px',
                       height: '30px',
                     },
+                    width: '60px',
+                    height: '60px',
                   }}
                 />
               </ListItemAvatar>

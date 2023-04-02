@@ -21,12 +21,12 @@ const GroupAvatar = memo((props) => {
               src={profile.image}
               key={profile.id}
               sx={{
-                width: '40px',
-                height: '40px',
                 '@media screen and (max-width:600px)': {
                   width: '20px',
                   height: '20px',
                 },
+                width: '40px',
+                height: '40px',
               }}
             />
           );
