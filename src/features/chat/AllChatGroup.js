@@ -148,10 +148,10 @@ const AllChatGroup = memo((props) => {
                           primary={group.title}
                           primaryTypographyProps={{
                             sx: {
-                              fontSize: '18px',
                               '@media screen and (max-width:600px)': {
                                 fontSize: '12px',
                               },
+                              fontSize: '18px',
                             },
                           }}
                         />
@@ -159,11 +159,11 @@ const AllChatGroup = memo((props) => {
                           <Fab
                             color="success"
                             sx={{
-                              mr: 2,
-                              width: '100px',
                               '@media screen and (max-width:600px)': {
                                 width: '50px',
                               },
+                              mr: 2,
+                              width: '100px',
                             }}
                             variant="extended"
                             onClick={(event) => {
@@ -180,10 +180,10 @@ const AllChatGroup = memo((props) => {
                             color="error"
                             variant="extended"
                             sx={{
-                              width: '100px',
                               '@media screen and (max-width:600px)': {
                                 width: '50px',
                               },
+                              width: '100px',
                             }}
                             onClick={(event) => {
                               event.preventDefault();

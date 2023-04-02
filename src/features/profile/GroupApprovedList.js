@@ -45,11 +45,11 @@ const GroupApprovedList = memo((props) => {
               <Fab
                 variant="extended"
                 sx={{
-                  mr: 2,
-                  ml: 3,
                   '@media screen and (max-width:600px)': {
                     fontSize: '8px',
                   },
+                  mr: 2,
+                  ml: 3,
                   fontSize: '15px',
                 }}
                 size="small"
