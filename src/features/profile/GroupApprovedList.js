@@ -33,12 +33,15 @@ const GroupApprovedList = memo((props) => {
                   sx: {
                     fontSize: '18px',
                     'media screen and (max-width:600px)': {
-                      fontSize: '12px',
+                      fontSize: '8px',
                     },
                   },
                 }}
               />
-              <UserAvatarGroup inUser={group.inUser} />
+              <UserAvatarGroup
+                inUser={group.inUser}
+                openGrouper={group.openGrouper}
+              />
               <Fab
                 variant="extended"
                 sx={{ mr: 2, ml: 3 }}

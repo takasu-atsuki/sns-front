@@ -44,7 +44,7 @@ const FriendApproveList = memo((props) => {
                   sx: {
                     fontSize: '18px',
                     '@media screen and (max_width:600px)': {
-                      fontSize: '12px',
+                      fontSize: '8px',
                     },
                   },
                 }}

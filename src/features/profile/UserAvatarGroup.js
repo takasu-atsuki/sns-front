@@ -3,11 +3,12 @@ import { AvatarGroup } from '@mui/material';
 import GroupAvatar from './GroupAvatar';
 
 const UserAvatarGroup = memo((props) => {
-  const { inUser } = props;
+  const { inUser, openGrouper } = props;
+  const groupMember = inUser.unshift(openGrouper);
   return (
     <AvatarGroup max={5}>
-      {inUser.length > 0 &&
-        inUser.map((user) => {
+      {groupMember.length > 0 &&
+        groupMember.map((user) => {
           return <GroupAvatar user={user} key={user} />;
         })}
     </AvatarGroup>
