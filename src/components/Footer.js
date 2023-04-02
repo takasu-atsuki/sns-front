@@ -46,6 +46,7 @@ const Footer = () => {
           sx={{
             flexGrow: 1,
             justifyContent: 'center',
+            alignItems: 'center',
             display: 'flex',
             mb: 2,
           }}
