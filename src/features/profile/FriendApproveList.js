@@ -30,7 +30,7 @@ const FriendApproveList = memo((props) => {
       {profiles.length > 0 &&
         profiles.map((profile) => {
           return (
-            <ListItem key={profile.id}>
+            <ListItem key={profile.id} sx={{ padding: 2 }}>
               <ListItemAvatar sx={{ mr: 2 }}>
                 <Avatar
                   alt={`Avatar`}
@@ -58,7 +58,12 @@ const FriendApproveList = memo((props) => {
               />
               <Fab
                 variant="extended"
-                sx={{ mr: 2 }}
+                sx={{
+                  mr: 2,
+                  '@media screen and (max-width:600px)': {
+                    fontSize: '8px',
+                  },
+                }}
                 size="small"
                 onClick={(event) => {
                   event.preventDefault();

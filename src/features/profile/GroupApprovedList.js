@@ -44,7 +44,13 @@ const GroupApprovedList = memo((props) => {
               />
               <Fab
                 variant="extended"
-                sx={{ mr: 2, ml: 3 }}
+                sx={{
+                  mr: 2,
+                  ml: 3,
+                  '@media screen and (max-width:600px)': {
+                    fintSize: '8px',
+                  },
+                }}
                 size="small"
                 onClick={(event) => {
                   event.preventDefault();
