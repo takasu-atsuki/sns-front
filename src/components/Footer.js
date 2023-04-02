@@ -26,6 +26,9 @@ const Footer = () => {
         borderTop: (theme) => `1px solid ${theme.palette.divider}`,
         mt: 8,
         py: [3, 6],
+        position: 'sticky',
+        top: '100vh',
+        width: '100%',
       }}
     >
       <Copyright sx={{ mt: 5 }} />
