@@ -49,8 +49,10 @@ const UserDiary = memo((props) => {
         variant="masonry"
         gap={8}
       >
-        {selectDiary.length > 0 &&
-          selectDiary.map((diary) => (
+        {/* {selectDiary.length > 0 &&
+          selectDiary.map((diary) => (  */}
+        {allDiary.length > 0 &&
+          allDiary.map((diary) => (
             <ImageListItem key={diary.id}>
               <img
                 src={

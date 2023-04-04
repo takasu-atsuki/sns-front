@@ -65,100 +65,100 @@ const UserList = memo((props) => {
           filterProfiles.map((profile) => {
             return (
               <ListItem key={profile.id} sx={{ padding: 1 }}>
-                <ListItemButton
+                {/* <ListItemButton
                   onClick={(event) => {
                     event.preventDefault();
                     event.stopPropagation();
                     handleChangeUserId(profile.userPro);
                   }}
+                > */}
+                <ListItemAvatar
+                  sx={{
+                    '@media screen and (min-width:600px)': {
+                      mr: 2,
+                    },
+                  }}
                 >
-                  <ListItemAvatar
+                  <Avatar
+                    alt={`Avatar`}
+                    src={profile.image}
                     sx={{
-                      '@media screen and (min-width:600px)': {
-                        mr: 2,
+                      '@media screen and (max-width:600px)': {
+                        width: '30px',
+                        height: '30px',
                       },
-                    }}
-                  >
-                    <Avatar
-                      alt={`Avatar`}
-                      src={profile.image}
-                      sx={{
-                        '@media screen and (max-width:600px)': {
-                          width: '30px',
-                          height: '30px',
-                        },
-                        width: '60px',
-                        height: '60px',
-                      }}
-                    />
-                  </ListItemAvatar>
-                  <ListItemText
-                    primary={profile.nickName}
-                    primaryTypographyProps={{
-                      sx: {
-                        '@media screen and (max-width:600px)': {
-                          fontSize: '8px',
-                        },
-                        fontSize: '18px',
-                      },
+                      width: '60px',
+                      height: '60px',
                     }}
                   />
-                  <Fab
-                    variant="extended"
-                    sx={{
-                      mr: 1,
+                </ListItemAvatar>
+                <ListItemText
+                  primary={profile.nickName}
+                  primaryTypographyProps={{
+                    sx: {
                       '@media screen and (max-width:600px)': {
                         fontSize: '8px',
                       },
-                      fontSize: '15px',
-                    }}
-                    size="small"
-                    disabled={
-                      myFriend.filter(
-                        (friend) =>
-                          friend.askTo === profile.userPro ||
-                          friend.askFrom === profile.userPro
-                      )[0]
-                        ? true
-                        : false
-                    }
-                    onClick={(event) => {
-                      event.preventDefault();
-                      event.stopPropagation();
-                      clickPostFriend(profile.userPro);
-                    }}
-                  >
-                    FRIEND REQUEST
-                  </Fab>
-                  <Fab
-                    variant="extended"
-                    size="small"
-                    sx={{
-                      '@media screen and (max-width:600px)': {
-                        fontSize: '8px',
-                      },
-                      fontSize: '15px',
-                    }}
-                    onClick={(event) => {
-                      event.preventDefault();
-                      event.stopPropagation();
-                      modalOpen(profile.userPro);
-                    }}
-                    disabled={
-                      myFriend.filter(
-                        (friend) =>
-                          (friend.askTo === profile.userPro &&
-                            friend.approved === true) ||
-                          (friend.askFrom === profile.userPro &&
-                            friend.approved === true)
-                      )[0]
-                        ? false
-                        : true
-                    }
-                  >
-                    Send DM
-                  </Fab>
-                </ListItemButton>
+                      fontSize: '18px',
+                    },
+                  }}
+                />
+                <Fab
+                  variant="extended"
+                  sx={{
+                    mr: 1,
+                    '@media screen and (max-width:600px)': {
+                      fontSize: '8px',
+                    },
+                    fontSize: '15px',
+                  }}
+                  size="small"
+                  disabled={
+                    myFriend.filter(
+                      (friend) =>
+                        friend.askTo === profile.userPro ||
+                        friend.askFrom === profile.userPro
+                    )[0]
+                      ? true
+                      : false
+                  }
+                  onClick={(event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    clickPostFriend(profile.userPro);
+                  }}
+                >
+                  FRIEND REQUEST
+                </Fab>
+                <Fab
+                  variant="extended"
+                  size="small"
+                  sx={{
+                    '@media screen and (max-width:600px)': {
+                      fontSize: '8px',
+                    },
+                    fontSize: '15px',
+                  }}
+                  onClick={(event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    modalOpen(profile.userPro);
+                  }}
+                  disabled={
+                    myFriend.filter(
+                      (friend) =>
+                        (friend.askTo === profile.userPro &&
+                          friend.approved === true) ||
+                        (friend.askFrom === profile.userPro &&
+                          friend.approved === true)
+                    )[0]
+                      ? false
+                      : true
+                  }
+                >
+                  Send DM
+                </Fab>
+                {/* </ListItemButton> */}
               </ListItem>
             );
           })}
