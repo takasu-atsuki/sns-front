@@ -53,7 +53,7 @@ const Chat = memo((props) => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1 }}>
+      <Box sx={{ flexGrow: 1, padding: 3 }}>
         <AppBar position="fixed" sx={{ backgroundColor: '#dddddd' }}>
           <Toolbar variant="dense">
             <IconButton
