@@ -152,7 +152,10 @@ const Header = memo((props) => {
                     badgeContent={friendRequestCount + groupRequestCount}
                     color="success"
                   >
-                    <NotificationsIcon color="action" />
+                    <NotificationsIcon
+                      color="action"
+                      sx={{ cursor: 'pointer' }}
+                    />
                   </Badge>
                 </ListItem>
               </List>
@@ -173,7 +176,7 @@ const Header = memo((props) => {
                   }}
                   sx={{ display: 'flex', justifyContent: 'space-between' }}
                 >
-                  <Typography>Approve Friend</Typography>
+                  <Typography>APPROVE FRIEND</Typography>
                   {friendRequestCount !== 0 && (
                     <div className={styles.countBack}>{friendRequestCount}</div>
                   )}
@@ -186,7 +189,7 @@ const Header = memo((props) => {
                   }}
                   sx={{ display: 'flex', justifyContent: 'space-between' }}
                 >
-                  <Typography>Approve Group</Typography>
+                  <Typography>APPROVE GROUP</Typography>
                   {groupRequestCount !== 0 && (
                     <div className={styles.countBack}>{groupRequestCount}</div>
                   )}

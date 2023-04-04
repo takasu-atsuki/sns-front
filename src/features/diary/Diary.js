@@ -84,7 +84,7 @@ const Diary = memo((props) => {
         sx={{ my: { xs: 3, md: 6 }, p: { xs: 2, md: 3 } }}
       >
         <Typography component="h1" variant="h4" align="center">
-          One Word
+          ONE WORD
         </Typography>
         <Container>
           <Box sx={{ marginX: 'auto', mt: 2, textAlign: 'center' }}>

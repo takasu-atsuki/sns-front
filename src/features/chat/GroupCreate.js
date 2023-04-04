@@ -65,7 +65,7 @@ const GroupCreate = memo((props) => {
           error={groupErrMessage !== '' ? true : false}
           id="standard-basic"
           color="success"
-          label="TITLE"
+          label="Title"
           variant="standard"
           sx={{ width: '100%' }}
           value={title}

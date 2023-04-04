@@ -70,7 +70,7 @@ const ChatMessage = memo((props) => {
           onClick={clickPostMessage}
           disabled={!message || chatErrorMessage !== '' ? true : false}
         >
-          Send
+          SEND
         </Button>
       </Toolbar>
     </Box>
