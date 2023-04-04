@@ -80,7 +80,7 @@ const Chat = memo((props) => {
           </Toolbar>
         </AppBar>
       </Box>
-      <Container sx={{ paddingBottom: 3 }}>
+      <Container sx={{ paddingBottom: 5 }}>
         {chatFilter.length > 0 &&
           chatFilter.map((chat) => {
             return (
