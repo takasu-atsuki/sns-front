@@ -114,15 +114,12 @@ const allUserSlice = createSlice({
       state.errMessage = action.payload;
     });
     builder.addCase(updateLiked.fulfilled, (state, action) => {
-      if (state.selectUserAllDiary.length > 0) {
-        state.selectUserAllDiary.map((diary) => {
-          return diary.id === action.payload.id ? action.payload : diary;
-        });
-      } else {
-        state.allDiary = state.allDiary.map((diary) => {
-          return diary.id === action.payload.id ? action.payload : diary;
-        });
-      }
+      state.selectUserAllDiary.map((diary) => {
+        return diary.id === action.payload.id ? action.payload : diary;
+      });
+      state.allDiary = state.allDiary.map((diary) => {
+        return diary.id === action.payload.id ? action.payload : diary;
+      });
     });
     builder.addCase(updateLiked.rejected, (state, action) => {
       state.errMessage = action.payload;
