@@ -114,11 +114,12 @@ const allUserSlice = createSlice({
       state.errMessage = action.payload;
     });
     builder.addCase(updateLiked.fulfilled, (state, action) => {
-      state.allDiary = state.allDiary.map((diary) => {
-        return diary.id === action.payload.id ? action.payload : diary;
-      });
       if (state.selectUserAllDiary.length !== 0) {
         state.selectUserAllDiary.map((diary) => {
+          return diary.id === action.payload.id ? action.payload : diary;
+        });
+      } else {
+        state.allDiary = state.allDiary.map((diary) => {
           return diary.id === action.payload.id ? action.payload : diary;
         });
       }
