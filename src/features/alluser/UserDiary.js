@@ -1,4 +1,4 @@
-import React, { memo, useEffect } from 'react';
+import React, { memo, useState } from 'react';
 import {
   ImageList,
   ImageListItem,
@@ -24,6 +24,7 @@ const UserDiary = memo((props) => {
   const myProfile = useSelector(selectMyProfile);
   const dispatch = useDispatch();
   const selectUserAllDiary = useSelector(selectSelectUserAllDiary);
+  const [selectDiary, setSelectDiary] = useState(null);
 
   const clickUpdateLiked = (diary) => {
     const data = {
@@ -35,8 +36,9 @@ const UserDiary = memo((props) => {
     dispatch(updateLiked(data));
   };
 
-  const selectDiary =
-    selectUserAllDiary.length > 0 ? selectUserAllDiary : allDiary;
+  selectUserAllDiary.length > 0
+    ? setSelectDiary(selectUserAllDiary)
+    : setSelectDiary(allDiary);
 
   return (
     <Box sx={{ width: '100%', height: 600, overflowY: 'scroll' }}>

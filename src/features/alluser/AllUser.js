@@ -5,12 +5,7 @@ import { useSelector, useDispatch } from 'react-redux';
 import { useCookies } from 'react-cookie';
 import UserDiary from './UserDiary';
 import DMailModal from '../dmail/DMailModal';
-import {
-  getMyProf,
-  getProfiles,
-  getMyFriend,
-  selectProfiles,
-} from '../profile/profileSlice';
+import { getMyProf, getProfiles, getMyFriend } from '../profile/profileSlice';
 import {
   selectSelectUserId,
   setSelectUserDiary,
@@ -18,7 +13,6 @@ import {
   getAllDiary,
   setAllUserLoading,
   resetAllUserLoading,
-  selectSelectUserAllDiary,
 } from './allUserSlice';
 import { getGroupIn } from '../chat/chatSlice';
 import UserList from './UserList';
@@ -29,7 +23,6 @@ const AllUser = memo((props) => {
   const allUserLoading = useSelector(selectAllUserLoading);
   const dispatch = useDispatch();
   const selectUserId = useSelector(selectSelectUserId);
-  const selectUserAllDiary = useSelector(selectSelectUserAllDiary);
 
   const [open, setOpen] = useState(false);
 
@@ -45,7 +38,7 @@ const AllUser = memo((props) => {
       await dispatch(getAllDiary(token));
       await dispatch(resetAllUserLoading());
     })();
-  }, [dispatch, token, selectUserAllDiary]);
+  }, [dispatch, token]);
 
   useEffect(() => {
     dispatch(setSelectUserDiary(selectUserId));
