@@ -21,7 +21,7 @@ const ChatPersonalMessage = memo((props) => {
     dispatch(deleteChat(data));
   };
   return (
-    <>
+    <Box sx={{ paddingBottom: 5 }}>
       {chat.sender === myProfile.userPro ? (
         <Box
           sx={{
@@ -83,7 +83,7 @@ const ChatPersonalMessage = memo((props) => {
           </Paper>
         </Box>
       )}
-    </>
+    </Box>
   );
 });
 
