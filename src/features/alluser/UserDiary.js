@@ -24,7 +24,6 @@ const UserDiary = memo((props) => {
   const myProfile = useSelector(selectMyProfile);
   const dispatch = useDispatch();
   const selectUserAllDiary = useSelector(selectSelectUserAllDiary);
-  const [selectDiary, setSelectDiary] = useState(null);
 
   const clickUpdateLiked = (diary) => {
     const data = {
@@ -36,9 +35,8 @@ const UserDiary = memo((props) => {
     dispatch(updateLiked(data));
   };
 
-  selectUserAllDiary.length > 0
-    ? setSelectDiary(selectUserAllDiary)
-    : setSelectDiary(allDiary);
+  const selectDiary =
+    selectUserAllDiary.length > 0 ? selectUserAllDiary : allDiary;
 
   return (
     <Box sx={{ width: '100%', height: 600, overflowY: 'scroll' }}>
