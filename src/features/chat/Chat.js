@@ -53,7 +53,7 @@ const Chat = memo((props) => {
 
   return (
     <>
-      <Box sx={{ flexGrow: 1, padding: 3 }}>
+      <Box sx={{ flexGrow: 1 }}>
         <AppBar position="fixed" sx={{ backgroundColor: '#dddddd' }}>
           <Toolbar variant="dense">
             <IconButton
@@ -80,7 +80,7 @@ const Chat = memo((props) => {
           </Toolbar>
         </AppBar>
       </Box>
-      <Container>
+      <Container sx={{ paddingBottom: 3 }}>
         {chatFilter.length > 0 &&
           chatFilter.map((chat) => {
             return (
