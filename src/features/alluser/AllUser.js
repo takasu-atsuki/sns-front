@@ -18,6 +18,7 @@ import {
   getAllDiary,
   setAllUserLoading,
   resetAllUserLoading,
+  selectSelectUserAllDiary,
 } from './allUserSlice';
 import { getGroupIn } from '../chat/chatSlice';
 import UserList from './UserList';
@@ -28,6 +29,7 @@ const AllUser = memo((props) => {
   const allUserLoading = useSelector(selectAllUserLoading);
   const dispatch = useDispatch();
   const selectUserId = useSelector(selectSelectUserId);
+  const selectUserAllDiary = useSelector(selectSelectUserAllDiary);
 
   const [open, setOpen] = useState(false);
 
@@ -43,7 +45,7 @@ const AllUser = memo((props) => {
       await dispatch(getAllDiary(token));
       await dispatch(resetAllUserLoading());
     })();
-  }, [dispatch, token]);
+  }, [dispatch, token, selectUserAllDiary]);
 
   useEffect(() => {
     dispatch(setSelectUserDiary(selectUserId));

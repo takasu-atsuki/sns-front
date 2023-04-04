@@ -35,13 +35,8 @@ const UserDiary = memo((props) => {
     dispatch(updateLiked(data));
   };
 
-  var selectDiary = [];
-
-  useEffect(() => {
-    selectDiary = selectUserAllDiary.length > 0 ? selectUserAllDiary : allDiary;
-  }, [selectUserAllDiary, allDiary]);
-
-  selectDiary = selectUserAllDiary.length > 0 ? selectUserAllDiary : allDiary;
+  const selectDiary =
+    selectUserAllDiary.length > 0 ? selectUserAllDiary : allDiary;
 
   return (
     <Box sx={{ width: '100%', height: 600, overflowY: 'scroll' }}>
