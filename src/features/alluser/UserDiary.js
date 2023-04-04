@@ -1,4 +1,4 @@
-import React, { memo } from 'react';
+import React, { memo, useEffect } from 'react';
 import {
   ImageList,
   ImageListItem,
@@ -35,8 +35,13 @@ const UserDiary = memo((props) => {
     dispatch(updateLiked(data));
   };
 
-  const selectDiary =
-    selectUserAllDiary.length > 0 ? selectUserAllDiary : allDiary;
+  var selectDiary = [];
+
+  useEffect(() => {
+    selectDiary = selectUserAllDiary.length > 0 ? selectUserAllDiary : allDiary;
+  }, [selectUserAllDiary, allDiary]);
+
+  selectDiary = selectUserAllDiary.length > 0 ? selectUserAllDiary : allDiary;
 
   return (
     <Box sx={{ width: '100%', height: 600, overflowY: 'scroll' }}>
