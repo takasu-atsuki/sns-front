@@ -65,7 +65,6 @@ const DiaryList = memo((props) => {
                           : process.env.REACT_APP_NO_IMAGE_URL
                       }
                       alt={diary.message ? diary.message : 'NO TITLE'}
-                      loading="lazy"
                     />
                     <ImageListItemBar title={diary.message} subtitle={''} />
                     <Fab
