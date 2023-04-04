@@ -117,6 +117,11 @@ const allUserSlice = createSlice({
       state.allDiary = state.allDiary.map((diary) => {
         return diary.id === action.payload.id ? action.payload : diary;
       });
+      if (state.selectUserAllDiary.length !== 0) {
+        state.selectUserAllDiary.map((diary) => {
+          return diary.id === action.payload.id ? action.payload : diary;
+        });
+      }
     });
     builder.addCase(updateLiked.rejected, (state, action) => {
       state.errMessage = action.payload;
